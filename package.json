@@ -12,6 +12,7 @@
   },
   "private": true,
   "dependencies": {
+    "module": "*",
     "@angular/animations": "7.2.4",
     "@angular/common": "7.2.4",
     "@angular/compiler": "7.2.4",
