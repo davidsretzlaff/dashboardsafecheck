@@ -1,0 +1,98 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt--7">
+  <div class="row">
+
+    <div class="row mt-7">
+      <div class="col-xl-7 mb-5 mb-xl-0">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">Produtos Pendentes</h3>
+              </div>
+              <div class="col text-right">
+                  <button type="button" routerLinkActive="active" [routerLink]="['/pendent-product/', 0]" class="btn btn-sm btn-primary">Novo Produto</button>
+                </div>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- Projects table -->
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Produto</th>
+                  <th scope="col">Código de barra</th>
+                  <th scope="col">Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of products">
+                  <th class="ellipsis" scope="row">
+                    {{item.name}}
+                  </th>
+                  <th>{{item.barcode}}</th>
+                  <th> <button type="button" routerLinkActive="active" [routerLink]="['/pendent-product/', item._id]" class="btn btn-success btn-sm">Editar</button>
+                    <button type="button" (click)="deleteProduct(item._id)" class="btn btn-danger btn-sm">Excluir</button>
+                  </th>
+
+                </tr>
+                <tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 mb-5 mb-xl-0">
+     
+          <div class="card shadow" style="width:400px;">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">Marcas Pendentes</h3>
+                </div>
+                <div class="col text-right">
+                  <button type="button" routerLinkActive="active" [routerLink]="['/pendent-brand/', 0]" class="btn btn-sm btn-primary">Novo Produto</button>
+                </div>
+                
+              </div>
+            </div>
+            <div class="table-responsive">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Ação</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of brands">
+                    <th class="ellipsis" scope="row">
+                      {{item.name}}
+                    </th>
+
+                    <th> 
+                      <button type="button" routerLinkActive="active" [routerLink]="['/pendent-brand/', item._id]" class="btn btn-success btn-sm">Editar</button>
+                      <button type="button" (click)="deleteBrand(item._id)" class="btn btn-danger btn-sm">Excluir</button>
+                    </th>
+                  </tr>
+                  <tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+   
+
+  </div>
