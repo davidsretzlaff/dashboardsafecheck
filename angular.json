@@ -15,8 +15,8 @@
       },
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
+            "builder": "@angular-devkit/build-angular:browser",
+           "options": {
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,7 +33,7 @@
             "scripts": [
               "node_modules/chart.js/dist/Chart.min.js",
               "node_modules/clipboard/dist/clipboard.min.js"
-            ]
+            ],
           },
           "configurations": {
             "production": {
