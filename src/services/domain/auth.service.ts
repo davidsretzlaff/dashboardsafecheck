@@ -25,6 +25,7 @@ export class AuthService {
         });
     }
     reset_password(user: User){
+      
       return new Promise((resolve, reject) => {
           this.http.post(`${API_CONFIG.baseUrl}/auth/reset_password`, user)
           .subscribe((result: any) => {
