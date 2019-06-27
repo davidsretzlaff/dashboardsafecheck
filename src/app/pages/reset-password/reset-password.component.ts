@@ -17,7 +17,7 @@ export class ResetPasswordComponent implements OnInit {
   public userLogin: User = {};
   private loading: any;
   token:any;
-  private textError :string =""; 
+  textError :string =""; 
   private success : Boolean;
 
   ngOnInit() {
