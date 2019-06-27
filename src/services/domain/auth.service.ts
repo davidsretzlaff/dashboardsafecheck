@@ -27,13 +27,12 @@ export class AuthService {
     reset_password(user: User){
       return new Promise((resolve, reject) => {
           this.http.post(`${API_CONFIG.baseUrl}/auth/reset_password`, user)
-            .subscribe(res => {
-              this.successfulLogin(user.email);
-              resolve(res);
-            }, (err) => {
-              reject(err);
-            });
-        });
+          .subscribe((result: any) => {
+            resolve(result);
+          },(error) => {
+            reject(error);
+          });
+      });
     }
     login(user: User){
         return new Promise((resolve, reject) => {

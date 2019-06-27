@@ -29,8 +29,7 @@ import { ResetPasswordSuccessComponent } from './pages/reset-password-success/re
     ComponentsModule,
     NgbModule,
     RouterModule,
-    AppRoutingModule,
-    
+    AppRoutingModule,    
   ],
   declarations: [
     AppComponent,

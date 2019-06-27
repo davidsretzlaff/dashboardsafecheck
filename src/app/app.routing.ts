@@ -10,6 +10,7 @@ import { PendentBrandComponent } from './pages/pendent-brand/pendent-brand.compo
 
 import { AuthGuard } from './auth.guard';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
+import { ResetPasswordSuccessComponent } from './pages/reset-password-success/reset-password-success.component';
 const routes: Routes =[
   {
     path: 'dashboard',
@@ -21,6 +22,7 @@ const routes: Routes =[
   { path: 'pendent-product/:id',          component: PendentProductComponent ,  canActivate : [AuthGuard]},
   { path: 'pendent-brand/:id',          component: PendentBrandComponent ,  canActivate : [AuthGuard]},
   { path: 'reset-password/:token',          component: ResetPasswordComponent },
+  { path: 'reset-password-success',          component: ResetPasswordSuccessComponent },
   {
     path: '',
     component: AdminLayoutComponent,
