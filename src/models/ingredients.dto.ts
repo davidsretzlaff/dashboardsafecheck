@@ -1,6 +1,6 @@
 
 
 export interface IngredientsDTO {
-    id : string;
-    name: string;
+    id? : string;
+    name?: string;
 }

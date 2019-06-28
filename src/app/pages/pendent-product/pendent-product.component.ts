@@ -23,7 +23,7 @@ export class PendentProductComponent implements OnInit {
   id: any;
   product: ProductDTO;
   public newProduct: ProductDTO = {};
-
+  public emptIngredients: [IngredientsDTO]=[{}];
   visible : Boolean = false;
   arrayIngredients : [IngredientsDTO];
   ing: IngredientsDTO;
@@ -80,6 +80,8 @@ export class PendentProductComponent implements OnInit {
       
       for (var i = 0; i < this.arrayIngredients.length; i++) {
         if(this.arrayIngredients[i].name != "")
+           if(this.newProduct.ingredients == undefined)
+              this.newProduct.ingredients = this.emptIngredients;
            this.newProduct.ingredients.push(this.arrayIngredients[i]);
       }
        this.arrayIngredients = null;

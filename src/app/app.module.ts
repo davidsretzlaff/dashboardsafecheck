@@ -20,7 +20,8 @@ import { PendentProductComponent } from './pages/pendent-product/pendent-product
 import { PendentBrandComponent } from './pages/pendent-brand/pendent-brand.component';
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 import { ResetPasswordSuccessComponent } from './pages/reset-password-success/reset-password-success.component';
-
+import { UserSearchesComponent } from './pages/user-searches/user-searches.component';
+import{ UserSearchesService} from 'src/services/domain/userSearches.service';
 @NgModule({
   imports: [
     BrowserAnimationsModule,
@@ -38,9 +39,11 @@ import { ResetPasswordSuccessComponent } from './pages/reset-password-success/re
     PendentProductComponent,
     PendentBrandComponent,
     ResetPasswordComponent,
-    ResetPasswordSuccessComponent
+    ResetPasswordSuccessComponent,
+    UserSearchesComponent,
+    
   ],
-  providers: [StorageService,AuthService,BrandService,ProductService],
+  providers: [StorageService,AuthService,BrandService,ProductService,UserSearchesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,55 @@
+<div class="header bg-gradient-success pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div style = "text-align: center"class="header-body">
+      <h1 style="color:white">Safecheck </h1>
+
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="text-align: center ; margin-top: -80px;">
+  <div class="row">
+    <div class="row col-xl-3"> </div>
+    <div style="margin-left: 30px;" class="row col-xl-6">
+      <div class="col-xl-12 mb-8 mb-xl-8">
+        <div class="card shadow">
+          <div class="card-header border-0">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">Buscas não encontradas</h3>
+              </div>
+              
+            </div>
+          </div>
+          <div class="table-responsive">
+            <!-- Projects table -->
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Verificado</th>
+                  <th scope="col">Ação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of userSearches">
+                  <th class="ellipsis" scope="row">
+                    {{item.name}}
+                  </th>
+                  <th>{{item.verify}}</th>
+                  <th> <button type="button" routerLinkActive="active" [routerLink]="['/pendent-product/', item._id]" class="btn btn-success btn-sm">Editar</button>
+                    <button type="button" (click)="deleteUserSearches(item._id)" class="btn btn-danger btn-sm">Excluir</button>
+                  </th>
+
+                </tr>
+                <tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      
+      </div>
+   
+
+  </div>
